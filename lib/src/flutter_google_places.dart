@@ -420,14 +420,14 @@ class AppBarPlacesAutoCompleteTextField extends StatefulWidget {
   final InputDecoration? textDecoration;
   final TextStyle? textStyle;
   final Color? cursorColor;
-  void? onTap;
+  void Function() onTap;
 
-  const AppBarPlacesAutoCompleteTextField({
+  AppBarPlacesAutoCompleteTextField({
     Key? key,
     required this.textDecoration,
     required this.textStyle,
     required this.cursorColor,
-    this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -451,7 +451,7 @@ class _AppBarPlacesAutoCompleteTextFieldState
           decoration:
               widget.textDecoration ?? _defaultDecoration(state.widget.hint),
           cursorColor: widget.cursorColor,
-          onTap: onTap?,
+          onTap: onTouch,
         ));
   }
 
@@ -479,6 +479,10 @@ class _AppBarPlacesAutoCompleteTextFieldState
           : Colors.white.withOpacity(0.9),
       fontSize: 16.0,
     );
+  }
+
+  void onTouch() {
+    print('Touch Clicked');
   }
 }
 
