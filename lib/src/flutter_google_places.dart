@@ -420,7 +420,7 @@ class AppBarPlacesAutoCompleteTextField extends StatefulWidget {
   final InputDecoration? textDecoration;
   final TextStyle? textStyle;
   final Color? cursorColor;
-  final void? onTap;
+  void? onTap;
 
   const AppBarPlacesAutoCompleteTextField({
     Key? key,
