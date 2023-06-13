@@ -421,6 +421,7 @@ class AppBarPlacesAutoCompleteTextField extends StatefulWidget {
   final TextStyle? textStyle;
   final Color? cursorColor;
   final GestureTapCallback? onTap;
+  final TapRegionCallback? onTapOutside;
 
   AppBarPlacesAutoCompleteTextField({
     Key? key,
@@ -428,6 +429,7 @@ class AppBarPlacesAutoCompleteTextField extends StatefulWidget {
     required this.textStyle,
     required this.cursorColor,
     this.onTap,
+    this.onTapOutside,
   }) : super(key: key);
 
   @override
@@ -452,6 +454,7 @@ class _AppBarPlacesAutoCompleteTextFieldState
               widget.textDecoration ?? _defaultDecoration(state.widget.hint),
           cursorColor: widget.cursorColor,
           onTap: widget.onTap,
+          onTapOutside: widget.onTapOutside,
         ));
   }
 
