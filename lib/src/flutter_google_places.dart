@@ -210,9 +210,6 @@ class _PlacesAutocompleteScaffoldState extends PlacesAutocompleteState {
         textDecoration: widget.textDecoration,
         textStyle: widget.textStyle,
         cursorColor: widget.cursorColor,
-        onTouch: () {
-          print("line 209");
-        },
       ),
     );
     final body = PlacesAutocompleteResult(
