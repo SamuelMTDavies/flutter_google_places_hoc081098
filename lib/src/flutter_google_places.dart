@@ -210,6 +210,9 @@ class _PlacesAutocompleteScaffoldState extends PlacesAutocompleteState {
         textDecoration: widget.textDecoration,
         textStyle: widget.textStyle,
         cursorColor: widget.cursorColor,
+        onTouch: () {
+          print("line 209");
+        },
       ),
     );
     final body = PlacesAutocompleteResult(
@@ -420,14 +423,14 @@ class AppBarPlacesAutoCompleteTextField extends StatefulWidget {
   final InputDecoration? textDecoration;
   final TextStyle? textStyle;
   final Color? cursorColor;
-  void Function() onTap;
+  void Function() onTouch;
 
   AppBarPlacesAutoCompleteTextField({
     Key? key,
     required this.textDecoration,
     required this.textStyle,
     required this.cursorColor,
-    required this.onTap,
+    required this.onTouch,
   }) : super(key: key);
 
   @override
