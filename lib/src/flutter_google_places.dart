@@ -427,6 +427,7 @@ class AppBarPlacesAutoCompleteTextField extends StatefulWidget {
     required this.textDecoration,
     required this.textStyle,
     required this.cursorColor,
+    this.onTap,
   }) : super(key: key);
 
   @override
